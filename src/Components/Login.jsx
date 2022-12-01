@@ -9,7 +9,7 @@ export const Login = () => {
     })
 
     return (
-        <div className='container'>
+        <div className='container flex-center'>
             <div className="card shadow-lg border-0 rounded-lg mt-5">
                 <div className="card-header"><center><h3>Plataforma virtual - EntregasHoy</h3></center></div>
 

@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { endpointRegister } from '../constants/constants';
 
 export const SignIn = () => {
   const [signin, setSignin] = useState({
@@ -6,9 +8,28 @@ export const SignIn = () => {
     password:""
 });
 
-const handleSubmitin = (e) =>{
+const navigate = useNavigate()
+
+const handleSubmitin = async(e) =>{
     e.preventDefault();
-    console.log(`usuario: ${signin.username}\n` + `contraseña: ${signin.password}`)
+    //console.log(`usuario: ${signin.username}\n` + `contraseña: ${signin.password}`);
+    try{
+      const response = await fetch(endpointRegister,{ //fetch devuelve una promesa
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body:JSON.stringify(signin),
+      })
+      const data = await response.json()    //espera de la promesa
+      console.log(data)
+      if (data.login){ //.login del endpoint
+        navigate('/'); //nombre de la ruta
+      } 
+      //navigate('/');    
+    }catch(e){
+      alert('Ha sucedido un error, comunicate con el administrador');
+    }
 }
 
 const handleInOnChange = (value,atributte) =>{
