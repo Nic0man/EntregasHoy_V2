@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Login } from '../Components/Login'
-import { DefaultLayout } from "../layout/DefaultLayout"
+import { Login } from './Components/Login'
+import { DefaultLayout } from "./layout/DefaultLayout"
 
 function App() {
 
