@@ -24,7 +24,7 @@ const handleSubmitin = async(e) =>{
       const data = await response.json()    //espera de la promesa
       console.log(data)
       if (data.login){ //.login del endpoint
-        navigate('/'); //nombre de la ruta
+        navigate('/Seguimiento'); //nombre de la ruta
       } 
       //navigate('/');    
     }catch(e){
