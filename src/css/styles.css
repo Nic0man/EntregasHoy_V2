@@ -642,8 +642,9 @@ progress {
   width: 600px;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto;
+  margin-left: auto; */
+  width: 100%;
   height: 100vh;
   padding-bottom: 100px;
 }
@@ -11745,5 +11746,25 @@ body {
   display:flex;
 }
 
+.resumen{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
 
+.izq{
+  position: absolute;
+  right: 2%;
+}
+
+.der{
+  position: absolute;
+  left: 66%;
+}
+
+.centro{
+  flex: 1;
+  text-align: center;
+}
   
